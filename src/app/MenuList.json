@@ -1,0 +1,91 @@
+[
+   {
+      "id": 1,
+      "title": "Все книги",
+      "category": "all"
+   },
+   {
+      "id": 2,
+      "title": "Бизнес-книги",
+      "amount": 14,
+      "category": "business"
+   },
+   {
+      "id": 3,
+      "title": "Детективы",
+      "amount": 8,
+      "category": "detectives"
+   },
+   {
+      "id": 4,
+      "title": "Детские книги",
+      "amount": 14,
+      "category": "children"
+   },
+   {
+      "id": 5,
+      "title": "Зарубежная литература",
+      "amount": 2,
+      "category": "foreign"
+   },
+   {
+      "id": 6,
+      "title": "История",
+      "amount": 5,
+      "category": "history"
+   },
+   {
+      "id": 7,
+      "title": "Классическая литература",
+      "amount": 12,
+      "category": "classical"
+   },
+   {
+      "id": 8,
+      "title": "Книги по психологии",
+      "amount": 11,
+      "category": "psychology"
+   },
+   {
+      "id": 9,
+      "title": "Компьютерная литература",
+      "amount": 54,
+      "category": "computer"
+   },
+   {
+      "id": 10,
+      "title": "Культура и искусство",
+      "amount": 5,
+      "category": "art"
+   },
+   {
+      "id": 11,
+      "title": "Наука и образование",
+      "amount": 2,
+      "category": "science"
+   },
+   {
+      "id": 12,
+      "title": "Публицистическая литература",
+      "amount": 0,
+      "category": "journalistic"
+   },
+   {
+      "id": 13,
+      "title": "Справочники",
+      "amount": 10,
+      "category": "directory"
+   },
+   {
+      "id": 14,
+      "title": "Фантастика",
+      "amount": 12,
+      "category": "fantasy"
+   },
+   {
+      "id": 15,
+      "title": "Юмористическая литература",
+      "amount": 8,
+      "category": "humorous"
+   }
+]

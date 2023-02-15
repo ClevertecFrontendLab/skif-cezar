@@ -1,0 +1,220 @@
+$hover: linear-gradient(231.58deg, #f83600 -53.35%, #f9d423 297.76%);
+$primary: #363636;
+$smal-inactive: #a7a7a7;
+
+.menu {
+  width: 279px;
+  margin-top: 62px;
+  grid-area: menu;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list > .item:nth-child(1) {
+  position: relative;
+}
+
+.button_menu {
+  position: absolute;
+  top: 0px;
+  right: 12px;
+  display: inline-block;
+  width: 14px;
+  height: 8px;
+  padding: 12px 12px;
+  background: $primary;
+  -webkit-mask-image: url('../../../resources/icon-arrow.svg');
+  -webkit-mask-position: center;
+  -webkit-mask-size: auto;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: auto;
+  mask-repeat: no-repeat;
+  mask-image: url('../../../resources/icon-arrow.svg');
+  cursor: pointer;
+  transition: transform 1s;
+  z-index: 10;
+}
+
+.button_menu.active {
+  background: $hover;
+}
+
+.button_close {
+  transform: rotate(180deg);
+}
+
+.menu .list:nth-child(2) {
+  display: none;
+}
+
+.item {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+}
+
+.menu .list:nth-child(1) .item:not(:nth-child(1)) {
+  margin-top: 42px;
+}
+
+.menu .list:nth-child(1) .item:nth-child(3) {
+  margin-top: 26px;
+}
+
+.menu .list .item a {
+  display: inline-block;
+  width: 255px;
+}
+
+.menu .list:nth-child(1) .item a.active {
+  display: inline-block;
+  padding-bottom: 8px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-image: $hover;
+  border-image-slice: 1;
+}
+
+.item:hover {
+  background: $hover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding-top: 16px;
+  padding-left: 20px;
+  max-height: 652px;
+  opacity: 1;
+  visibility: visible;
+  transition-property: opacity, visibility, max-height;
+  transition-duration: 0.3s;
+  transition-delay: 0.15s;
+
+  &_close {
+    max-height: 0px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.sub_item {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.sub_link {
+  display: block;
+  height: auto;
+  padding: 0 4px;
+}
+
+.active_sub_link span {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  background: $hover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.active_sub_link small {
+  color: $primary;
+}
+
+.sub_link small {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-left: 1.7px;
+  color: $smal-inactive;
+}
+
+.active {
+  background: $hover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 992.02px) {
+  .menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: 502px;
+    margin: 0;
+    left: 15px;
+    top: 90px;
+    left: -100%;
+    transition: left 1s;
+    z-index: 10;
+    background-color: #f9f9fa;
+    box-shadow: 0px 2px 4px rgb(191 196 201 / 20%), 0px 3px 4px rgb(191 196 201 / 18%),
+      0px 1px 5px rgb(191 196 201 / 24%);
+    border-radius: 10px;
+  }
+  .menu_open {
+    left: 15px;
+  }
+  .menu .list {
+    padding: 32px 32px 52px 32px;
+  }
+  .menu .list:nth-child(2) {
+    margin-top: 32px;
+  }
+  .menu .list:nth-child(1) {
+    border-bottom: 1px solid #bfc4c9;
+  }
+  .menu .list:nth-child(2) {
+    padding-top: 0px;
+  }
+  .menu .list:nth-child(2) .item:nth-child(2) {
+    margin-top: 42px;
+  }
+  .menu .list:nth-child(2) {
+    display: block;
+  }
+}
+
+@media (max-width: 576.02px) {
+  .menu {
+    max-width: 288px;
+    top: 76px;
+    padding: 32px 0px 52px 16px;
+  }
+  .menu .list {
+    padding: 0px;
+    padding-bottom: 52px;
+  }
+  .sub_list {
+    max-height: 690px;
+    opacity: 1;
+    visibility: visible;
+    transition-property: opacity, visibility, max-height;
+    transition-duration: 0.3s;
+    transition-delay: 0.15s;
+  }
+  .sub_list.sub_list_close {
+    max-height: 0px;
+    opacity: 0;
+    visibility: visible;
+    display: none;
+  }
+  .menu .list:nth-child(1) .item:not(:nth-child(1)) {
+    margin-top: 42px;
+  }
+}

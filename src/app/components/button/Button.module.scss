@@ -1,0 +1,35 @@
+$primary: #363636;
+$smal-inactive: #a7a7a7;
+
+.button,
+.active,
+.booked {
+  margin: 19px auto 0px;
+  width: 166px;
+  height: 40px;
+  background: linear-gradient(231.58deg, #f83600 -53.35%, #f9d423 297.76%);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.active {
+  background: #ffffff;
+  border: 1px solid #bfc4c9;
+  color: $primary;
+}
+
+.booked {
+  background: #f9f9fa;
+  border: 1px solid #bfc4c9;
+  color: $smal-inactive;
+  cursor: auto;
+}

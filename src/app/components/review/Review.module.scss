@@ -1,0 +1,105 @@
+.review {
+  margin-bottom: 45px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.name,
+.date {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #727272;
+}
+
+.rating {
+  margin-top: 16px;
+}
+
+.rating > div {
+  width: 168px;
+  column-gap: 16px;
+}
+
+.feedback {
+  margin-top: 19px;
+}
+
+.feedback p {
+  width: 100%;
+  max-width: 730px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #363636;
+}
+
+@media (max-width: 576.02px) {
+  .review {
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    margin-bottom: 35px;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 32px auto;
+    grid-template-rows: auto auto;
+    gap: 0px 18px;
+    grid-template-areas:
+      'avatar name'
+      'avatar date';
+  }
+  .avatar {
+    grid-area: avatar;
+  }
+  .name {
+    grid-area: name;
+  }
+  .date {
+    grid-area: date;
+  }
+  .rating {
+    margin-top: 14.25px;
+  }
+
+  .rating,
+  .rating > div {
+    height: 18.75px;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+  .rating > div {
+    padding: 0 2.25px;
+    column-gap: 12.57px;
+  }
+  .rating > div label,
+  .rating > div label::before,
+  .rating > div label:hover:before,
+  .rating > div label:hover ~ label:before,
+  .rating > div input:checked ~ label:before {
+    width: 19.5px;
+    height: 18.75px;
+    background-position: center;
+    background-size: cover;
+  }
+  .feedback {
+    margin-top: 11px;
+  }
+  .feedback p {
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}

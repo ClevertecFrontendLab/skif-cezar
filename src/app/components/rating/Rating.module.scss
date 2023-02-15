@@ -1,0 +1,13 @@
+.rating {
+  width: 144px;
+  height: 19px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 0 2px;
+  column-gap: 10px;
+}
+
+.rating:hover > input:checked ~ label:before {
+  opacity: 0.4;
+}
