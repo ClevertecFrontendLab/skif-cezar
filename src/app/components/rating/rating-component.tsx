@@ -8,7 +8,7 @@ import styles from 'src/app/components/rating/Rating.module.scss';
  * Rating interface
  */
 interface RatingInterface {
-  ratingValue: number | null;
+  ratingValue: number;
   idValue: number;
 }
 
@@ -18,7 +18,7 @@ interface RatingInterface {
 export const Rating: React.FC<RatingInterface> = (props: RatingInterface) => {
   const RATING_STYLES = clsx(styles.rating);
 
-  const rating = props.ratingValue;
+  const rating = Math.round(props.ratingValue);
   const countStar = 5;
 
   const onClick = (event: any) => {
@@ -28,9 +28,9 @@ export const Rating: React.FC<RatingInterface> = (props: RatingInterface) => {
 
   return (
     <div className={RATING_STYLES} onClick={onClick} aria-hidden='true'>
-      {Array.from(Array(5)).map((_, i) => (
+      {Array.from(Array(countStar)).map((_, i) => (
         // eslint-disable-next-line react/no-array-index-key
-        <StarButton name={`rating-${props.idValue}`} value={i} key={props.idValue * i} />
+        <StarButton name={`rating-${props.idValue}`} value={countStar-i} key={props.idValue * i} checked={rating} />
       ))}
     </div>
   );

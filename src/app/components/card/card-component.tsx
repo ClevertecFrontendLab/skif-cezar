@@ -33,8 +33,6 @@ export const Card: React.FC<BooksInterface> = (props: BooksInterface) => {
   const { view }: StoreInterface = useContext(BookContext);
   const bookImgUrl = (props.image !== null) ? `${HOST}${props.image.url}` : null;
 
-  console.log(bookImgUrl);
-
   return (
     <div className={view ? CARD_STYLES : CARD_LIST_STYLES} data-test-id='card'>
       <div className={view ? IMG_STYLES : IMG_LIST_STYLES}>

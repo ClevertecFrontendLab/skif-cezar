@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
 import clsx from 'clsx';
 import { Card } from 'src/app/components/card/card-component';
+import { Loader } from 'src/app/components/loader/loader';
 import { Navigation } from 'src/app/components/navigation/navigation-component';
 import { BookContext, StoreInterface } from 'src/app/logic/store-book';
 import {fetchBooks} from 'src/app/store/book-slice';
@@ -48,7 +49,7 @@ export const Content: React.FC = () => {
 
   return (
     <React.Fragment>
-      {status === 'loading' && <h2>Loading...</h2>}
+      {status === 'loading' && <Loader />}
       {error &&  <h2>An error occured: {error}</h2>}
       <Navigation />
       <section className={view ? CONTAINER_STYLES : CONTAINER_LIST_STYLES}>

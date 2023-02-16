@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
 import axios from 'axios';
 import clsx from 'clsx';
-import BooksDTO from 'src/app/Books.json';
 import { bookImages } from 'src/app/books-img';
 import { Button } from 'src/app/components/button/button-component';
 import { Header } from 'src/app/components/header/header-component';
