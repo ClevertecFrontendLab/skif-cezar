@@ -12,7 +12,7 @@ export const Loader: React.FC = () => {
 
   return (
     <div className={MODAL_STYLES}>
-      <span className={LOADER_STYLES}></span>
+      <span className={LOADER_STYLES}>Spinner</span>
     </div>
   );
 };
