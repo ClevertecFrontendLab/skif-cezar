@@ -77,28 +77,4 @@ export const Content: React.FC = () => {
       </section>
     </React.Fragment>
   );
-
-  /* return (
-    <React.Fragment>
-      {status === 'loading' && error === '' ? <Loader /> : <Error />}
-      <Navigation />
-      <section className={view ? CONTAINER_STYLES : CONTAINER_LIST_STYLES}>
-        <h2 className={TITLE_HIDDEN_STYLES}>Витрина книг</h2>
-        {books &&
-          books.map((book: BooksInterface) => (
-            <NavLink to={`/books/${category}/${book.id}`} key={book.id}>
-              <Card
-                id={book.id}
-                title={book.title}
-                authors={book.authors}
-                issueYear={book.issueYear}
-                image={book.image}
-                rating={book.rating}
-                booking={book.booking}
-              />
-            </NavLink>
-          ))}
-      </section>
-    </React.Fragment>
-  ); */
 };
