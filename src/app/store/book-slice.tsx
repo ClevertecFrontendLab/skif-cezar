@@ -8,7 +8,7 @@ export interface State {
   error: string | undefined;
 }
 
-export const HOST = 'https://strapi.cleverland.byp';
+export const HOST = 'https://strapi.cleverland.by';
 const BOOKS_URL = '/api/books';
 
 const initialState: State = {

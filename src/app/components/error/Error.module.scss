@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  max-width: 1110px;
   width: 97.368%;
   height: 80px;
   padding: 24px 32px;
@@ -67,6 +68,7 @@
   }
   .error {
     top: 62px;
+    max-width: 640px;
     width: 95.522%;
     height: 72px;
     padding: 24px 16px;

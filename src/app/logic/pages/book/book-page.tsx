@@ -10,7 +10,6 @@ import { Menu, MenuListInterface } from 'src/app/components/menu/menu-component'
 import { Rating } from 'src/app/components/rating/rating-component';
 import { Review } from 'src/app/components/review/review-component';
 import { Slider } from 'src/app/components/slider/slider';
-import { BooksInterface } from 'src/app/logic/content/content-component';
 import { Footer } from 'src/app/logic/footer/footer-component';
 import MenuListDTO from 'src/app/MenuList.json';
 import { removeSelectedBook, selectedBook } from 'src/app/store/actions/books-actions';
@@ -50,26 +49,7 @@ export const BookPage: React.FC = () => {
 
   const { category } = useParams();
   const { bookId } = useParams();
-  const dispatch = useDispatch();
 
-  const fetchBookDetail = async () => {
-    const response = await axios.get(`${HOST}${BOOKS_URL}${bookId}`).catch((error) => {
-      console.log('Error', error);
-    });
-
-    dispatch(selectedBook(response?.data));
-  };
-
-  useEffect(() => {
-    if (bookId && bookId !== '') fetchBookDetail();
-
-    return () => {
-      dispatch(removeSelectedBook());
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  //const book = BooksDTO.find((book: BooksInterface) => book.id === parseInt(bookId!, 10));
   const menuItem = MenuListDTO.find((menuItem: MenuListInterface) => menuItem.category === category);
   const bookImg = bookImages[parseInt(bookId!, 10) - 1];
 
